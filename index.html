@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="n1" type="number"><br><br>
+<input id="n2" type="number"><br><br>
+<input id="n3" type="number"><br><br>
+<input id="n4" type="number"><br><br>
+<button onclick="min()"></button>
+<p id="result"></p>
+<script>
+function min() {
+    let a = document.getElementById("n1").value;
+    let b = document.getElementById("n2").value;
+    let c = document.getElementById("n3").value;
+    let d = document.getElementById("n4").value;
+    if (a === "" || b === "" || c === "" || d === "") {
+        alert("error!");
+        return;
+    }
+    a = Number(a);
+    b = Number(b);
+    c = Number(c);
+    d = Number(d);
+    let min = a;
+    if (b < min) min = b;
+    if (c < min) min = c;
+    if (d < min) min = d;
+    document.getElementById("result").innerText =  min;
+    document.getElementById("n1").value = "";
+    document.getElementById("n2").value = "";
+    document.getElementById("n3").value = "";
+    document.getElementById("n4").value = "";
+}
+</script>
+</body>
+</html>
